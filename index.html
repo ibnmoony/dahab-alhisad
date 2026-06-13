@@ -29,14 +29,13 @@ nav{background:var(--dark);padding:0 2rem;display:flex;align-items:center;justif
 .nav-links li a{color:#aac8dc;text-decoration:none;padding:7px 13px;font-size:14px;border-radius:8px;transition:all 0.2s;display:flex;align-items:center;gap:5px}
 .nav-links li a:hover,.nav-links li a.active-link{color:#fff;background:rgba(20,143,119,0.25)}
 
+/* HERO */
 .hero{padding:5rem 2rem;text-align:center;min-height:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.5s ease-in-out}
 .hero-bg img.active{opacity:1}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(13,33,55,0.82) 0%,rgba(10,58,92,0.78) 60%,rgba(13,77,69,0.75) 100%);z-index:1}
-.hero>*:not(.hero-bg){position:relative;z-index:2};padding:5rem 2rem;text-align:center;min-height:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-80px;left:-80px;width:350px;height:350px;background:radial-gradient(circle,rgba(20,143,119,0.25) 0%,transparent 70%);pointer-events:none}
-.hero::after{content:'';position:absolute;bottom:-60px;right:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(36,113,163,0.2) 0%,transparent 70%);pointer-events:none}
+.hero>*:not(.hero-bg){position:relative;z-index:2}
 .hero-badge{background:rgba(20,143,119,0.2);border:1px solid var(--teal);color:var(--teal-light);padding:5px 18px;border-radius:20px;font-size:13px;margin-bottom:1.4rem;display:inline-block}
 .hero h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:900;color:#fff;line-height:1.3;margin-bottom:1rem}
 .hero h1 span{color:var(--teal-light)}
@@ -67,8 +66,8 @@ nav{background:var(--dark);padding:0 2rem;display:flex;align-items:center;justif
 .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;padding:0.5rem 2rem 3rem}
 .prod-card{background:#fff;border-radius:14px;border:1px solid #d5e8f0;overflow:hidden;transition:all 0.25s}
 .prod-card:hover{transform:translateY(-5px);box-shadow:0 10px 28px rgba(20,143,119,0.13);border-color:var(--teal)}
-.prod-img{height:200px;overflow:hidden;position:relative}
-.prod-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s}
+.prod-img{height:200px;overflow:hidden;position:relative;background:#eaf4fb;display:flex;align-items:center;justify-content:center;font-size:60px}
+.prod-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s;position:absolute;inset:0}
 .prod-card:hover .prod-img img{transform:scale(1.05)}
 .prod-badge{position:absolute;top:10px;right:10px;background:var(--teal);color:#fff;font-size:11px;padding:3px 10px;border-radius:20px;font-weight:700;z-index:1}
 .prod-badge.new{background:var(--blue-mid)}
@@ -85,12 +84,15 @@ nav{background:var(--dark);padding:0 2rem;display:flex;align-items:center;justif
 .filter-btn{background:#f0f8ff;border:1px solid #c5dff0;padding:7px 20px;border-radius:20px;font-size:13px;cursor:pointer;font-family:'Cairo',sans-serif;transition:all 0.2s;color:var(--text)}
 .filter-btn.active,.filter-btn:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
 
+/* LOCATION */
 .map-section{padding:2rem;background:var(--cream)}
 .map-box{background:var(--dark);border-radius:14px;height:270px;display:flex;align-items:center;justify-content:center;border:2px solid rgba(20,143,119,0.3)}
 .map-placeholder{text-align:center}
 .map-placeholder .map-icon{font-size:52px;margin-bottom:1rem;color:var(--teal-light)}
-.branches{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:1.5rem}
-.branch-card{background:#fff;border-radius:12px;padding:1.3rem;border:1px solid #c8e6f0;border-right:4px solid var(--teal)}
+.branches{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:1.5rem}
+.branch-card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #c8e6f0;border-top:4px solid var(--teal)}
+.branch-img{width:100%;height:150px;object-fit:cover;display:block}
+.branch-body{padding:1.2rem}
 .branch-card h4{font-weight:700;font-size:14px;color:var(--dark);margin-bottom:6px}
 .branch-card p{font-size:12px;color:var(--muted);line-height:1.75}
 .branch-icon{font-size:13px;color:var(--teal);font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:5px}
@@ -101,6 +103,7 @@ nav{background:var(--dark);padding:0 2rem;display:flex;align-items:center;justif
 .hours-row:last-child{border-bottom:none}
 .hours-row span:last-child{color:var(--teal);font-weight:700}
 
+/* CONTACT */
 .contact-section{padding:2.5rem 2rem;background:#fff}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;max-width:920px;margin:0 auto}
 @media(max-width:620px){.contact-grid{grid-template-columns:1fr}}
@@ -112,7 +115,7 @@ nav{background:var(--dark);padding:0 2rem;display:flex;align-items:center;justif
 .info-text a{color:var(--teal);text-decoration:none;font-size:12px}
 .info-text a:hover{text-decoration:underline}
 .social-icons{display:flex;gap:10px;margin-top:1.5rem;flex-wrap:wrap}
-.soc-btn{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;cursor:pointer;transition:opacity 0.2s;text-decoration:none}
+.soc-btn{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;cursor:pointer;transition:all 0.2s;text-decoration:none}
 .soc-btn:hover{opacity:0.82;transform:translateY(-2px)}
 .form-group{margin-bottom:1rem}
 .form-group label{display:block;font-size:13px;font-weight:600;color:var(--dark);margin-bottom:6px}
@@ -122,6 +125,7 @@ nav{background:var(--dark);padding:0 2rem;display:flex;align-items:center;justif
 .submit-btn{width:100%;background:linear-gradient(135deg,var(--blue-mid),var(--teal));color:#fff;border:none;padding:13px;border-radius:9px;font-family:'Cairo',sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:opacity 0.2s;display:flex;align-items:center;justify-content:center;gap:8px}
 .submit-btn:hover{opacity:0.9}
 
+/* FOOTER */
 footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
 .footer-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin-bottom:1.5rem}
 @media(max-width:600px){.footer-inner{grid-template-columns:1fr}}
@@ -145,9 +149,7 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
 
 <nav>
   <div class="nav-brand">
-    <div class="nav-logo">
-      <img src="logo.png" alt="ذهب الحصاد">
-    </div>
+    <div class="nav-logo"><img src="logo.png" alt="ذهب الحصاد"></div>
     <span class="nav-name">ذهب <span>الحصاد</span></span>
   </div>
   <ul class="nav-links">
@@ -161,6 +163,14 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
 <!-- الرئيسية -->
 <div id="page-home" class="page active">
   <div class="hero">
+    <div class="hero-bg">
+      <img src="1.jpg" class="active" alt="">
+      <img src="2.jpg" alt="">
+      <img src="3.jpg" alt="">
+      <img src="4.jpg" alt="">
+      <img src="5.jpg" alt="">
+      <img src="6.jpg" alt="">
+    </div>
     <div class="hero-badge">🏆 منذ 2005 — الجودة أولاً</div>
     <h1>مواد غذائية<br><span>فاخرة ومعبأة</span><br>بأعلى المعايير</h1>
     <p>نختار لكم أجود المنتجات الغذائية المعبأة من أفضل المصادر العالمية والمحلية، مع ضمان الجودة والسلامة الغذائية في كل منتج.</p>
@@ -204,31 +214,16 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
   <p class="section-sub">أبرز ما يقدمه ذهب الحصاد من أصناف فاخرة</p>
   <div class="products-grid">
     <div class="prod-card">
-      <div class="prod-img"><img src="tomato.jpg" alt="معجون الطماطم"><span class="prod-badge">الأكثر مبيعاً</span></div>
-      <div class="prod-body">
-        <div class="stars">★★★★★</div>
-        <div class="prod-name">معجون الطماطم الفاخر</div>
-        <div class="prod-desc">طبيعي 100% — مركز وغني بالنكهة، بدون مواد حافظة</div>
-        <div class="prod-footer"><span class="prod-price">٢٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div>
-      </div>
+      <div class="prod-img"><img src="tomato.png" alt="معجون الطماطم"><span class="prod-badge">الأكثر مبيعاً</span></div>
+      <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">معجون الطماطم الفاخر</div><div class="prod-desc">طبيعي 100% — مركز وغني بالنكهة، بدون مواد حافظة</div><div class="prod-footer"><span class="prod-price">٢٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card">
-      <div class="prod-img"><img src="spices.jpg" alt="بهارات مشكلة"></div>
-      <div class="prod-body">
-        <div class="stars">★★★★☆</div>
-        <div class="prod-name">بهارات مشكلة أصيلة</div>
-        <div class="prod-desc">نكهة أصيلة — خلطة طبيعية 100% بعبوة 300 جم</div>
-        <div class="prod-footer"><span class="prod-price">١٨ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div>
-      </div>
+      <div class="prod-img"><img src="spices.png" alt="بهارات مشكلة"></div>
+      <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">بهارات مشكلة أصيلة</div><div class="prod-desc">نكهة أصيلة — خلطة طبيعية 100% بعبوة 300 جم</div><div class="prod-footer"><span class="prod-price">١٨ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card">
       <div class="prod-img"><img src="olive.jpg" alt="زيت زيتون"><span class="prod-badge new">جديد</span></div>
-      <div class="prod-body">
-        <div class="stars">★★★★★</div>
-        <div class="prod-name">زيت زيتون فاخر</div>
-        <div class="prod-desc">عصر بارد من أفضل بساتين زيتون البحر الأبيض المتوسط</div>
-        <div class="prod-footer"><span class="prod-price">٤٥ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div>
-      </div>
+      <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">زيت زيتون فاخر</div><div class="prod-desc">عصر بارد من أفضل بساتين زيتون البحر الأبيض المتوسط</div><div class="prod-footer"><span class="prod-price">٤٥ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
   </div>
 
@@ -252,10 +247,10 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
         <a href="https://wa.me/966597250669"><i class="ti ti-brand-whatsapp"></i> 0597250669</a>
         <h4 style="margin-top:12px">تابعونا</h4>
         <div class="footer-social">
-          <a href="https://www.instagram.com/zhab_elhasad/" target="_blank" class="footer-soc" style="background:#E1306C" title="انستغرام"><i class="ti ti-brand-instagram"></i></a>
-          <a href="https://x.com/zhab_elhasad" target="_blank" class="footer-soc" style="background:#1DA1F2" title="تويتر X"><i class="ti ti-brand-twitter"></i></a>
-          <a href="https://tiktok.com/@zhab_elhasad" target="_blank" class="footer-soc" style="background:#010101" title="تيك توك"><i class="ti ti-brand-tiktok"></i></a>
-          <a href="https://www.youtube.com/@zhab_elhasad" target="_blank" class="footer-soc" style="background:#FF0000" title="يوتيوب"><i class="ti ti-brand-youtube"></i></a>
+          <a href="https://www.instagram.com/zhab_elhasad/" target="_blank" class="footer-soc" style="background:#E1306C"><i class="ti ti-brand-instagram"></i></a>
+          <a href="https://x.com/zhab_elhasad" target="_blank" class="footer-soc" style="background:#1DA1F2"><i class="ti ti-brand-twitter"></i></a>
+          <a href="https://tiktok.com/@zhab_elhasad" target="_blank" class="footer-soc" style="background:#010101"><i class="ti ti-brand-tiktok"></i></a>
+          <a href="https://www.youtube.com/@zhab_elhasad" target="_blank" class="footer-soc" style="background:#FF0000"><i class="ti ti-brand-youtube"></i></a>
         </div>
       </div>
     </div>
@@ -273,50 +268,39 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
     <button class="filter-btn" onclick="filterProd(this,'بهارات')">بهارات وتوابل</button>
     <button class="filter-btn" onclick="filterProd(this,'زيوت')">زيوت وصلصات</button>
     <button class="filter-btn" onclick="filterProd(this,'حبوب')">حبوب وبقوليات</button>
-    <button class="filter-btn" onclick="filterProd(this,'ألبان')">ألبان</button>
-    <button class="filter-btn" onclick="filterProd(this,'مشروبات')">مشروبات</button>
-    <button class="filter-btn" onclick="filterProd(this,'تمور')">تمور</button>
   </div>
-   <div class="prod-card" data-cat="تمور">
-      <div class="prod-img"><img src="13.jpg" alt="تمر خلاص فاخر"><span class="prod-badge">الأكثر مبيعاً</span></div>
-      <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">تمر خلاص فاخر</div><div class="prod-desc">القصيم — طبيعي 100%، 500 جم</div><div class="prod-footer"><span class="prod-price">21 ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
-    </div>
   <div class="products-grid" id="prodGrid">
     <div class="prod-card" data-cat="معلبات">
-      <div class="prod-img"><img src="21.jpg" alt="معجون الطماطم"><span class="prod-badge">الأكثر مبيعاً</span></div>
+      <div class="prod-img"><img src="tomato.png" alt="معجون الطماطم"><span class="prod-badge">الأكثر مبيعاً</span></div>
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">معجون الطماطم</div><div class="prod-desc">طبيعي 100% — مركز وغني بالنكهة، 800 جم</div><div class="prod-footer"><span class="prod-price">٢٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="بهارات">
-      <div class="prod-img"><img src="14.jpg" alt="بهارات مشكلة"></div>
+      <div class="prod-img"><img src="spices.png" alt="بهارات مشكلة"></div>
       <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">بهارات مشكلة</div><div class="prod-desc">نكهة أصيلة — طبيعي 100%، 300 جم</div><div class="prod-footer"><span class="prod-price">١٨ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="معلبات">
-      <div class="prod-img"><img src="15.png" alt="فاصوليا معلبة"></div>
+      <div class="prod-img"><img src="beans.png" alt="فاصوليا معلبة"><span class="prod-badge new">جديد</span></div>
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">فاصوليا معلبة</div><div class="prod-desc">مصدر بروتين وألياف — طبيعي 100%، جاهزة للأكل</div><div class="prod-footer"><span class="prod-price">١٥ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="زيوت">
-      <div class="prod-img"><img src="18.jbg" alt="زيت زيتون فاخر"></div>
+      <div class="prod-img"><img src="olive.jpg" alt="زيت زيتون"></div>
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">زيت زيتون فاخر</div><div class="prod-desc">عصر بارد من أفضل بساتين البحر الأبيض المتوسط</div><div class="prod-footer"><span class="prod-price">٤٥ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="حبوب">
-      <div class="prod-img"<img src="19.jpg" alt="أرز بسمتي ممتاز"></div>
+      <div class="prod-img">🌾</div>
       <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">أرز بسمتي ممتاز</div><div class="prod-desc">طويل الحبة عالي الجودة خالٍ من الشوائب</div><div class="prod-footer"><span class="prod-price">٣٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="حبوب">
-     <div class="prod-img"><img src="17.jpg" alt="عدس أصفر"></div>
-      <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">عدس أصفر</div><div class="prod-desc">غني بالبروتين والألياف، معبأ بشكل محكم</div><div class="prod-footer"><span class="prod-price">١٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
+      <div class="prod-img">🫘</div>
+      <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">عدس أخضر مجفف</div><div class="prod-desc">غني بالبروتين والألياف، معبأ بشكل محكم</div><div class="prod-footer"><span class="prod-price">١٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="بهارات">
-     <div class="prod-img"><img src="kamo.jpg" alt="كمون حبشي أصيل"></div>
+      <div class="prod-img">🌿</div>
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">كمون حبشي أصيل</div><div class="prod-desc">طازج التحميص بعبوة محكمة الإغلاق</div><div class="prod-footer"><span class="prod-price">٩ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="زيوت">
-      <div class="prod-img"><img src="20.jpg" alt="صلصة الطماطم الإيطالية"></div>
+      <div class="prod-img">🍅</div>
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">صلصة الطماطم الإيطالية</div><div class="prod-desc">وصفة أصيلة من أجود الطماطم الإيطالية الطازجة</div><div class="prod-footer"><span class="prod-price">٢٨ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
-    </div>
-    <div class="prod-card" data-cat="ألبان">
-      <div class="prod-img"><img src="12.jpg" alt="حليب أبقار"></div>
-      <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">حليب أبقار</div><div class="prod-desc">طازج يوميا من مزارعنا</div><div class="prod-footer"><span class="prod-price">11 ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
   </div>
   <footer>
@@ -332,24 +316,33 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
     <div class="map-box">
       <div class="map-placeholder">
         <div class="map-icon"><i class="ti ti-map-2"></i></div>
-        <p style="color:#9fc8dc;font-size:14px">المقر الرئيسي: حفر الباطن، حي المحمدية<br><span style="color:var(--teal-light);font-size:13px">شارع أبو بكر الصديق، مجمع ذهب الحصاد التجاري</span></p>
+        <p style="color:#9fc8dc;font-size:14px">المقر الرئيسي: الدمام، حي العزيزية<br><span style="color:var(--teal-light);font-size:13px">شارع الملك فهد، مجمع ذهب الحصاد التجاري</span></p>
       </div>
     </div>
     <div class="branches">
       <div class="branch-card">
-        <div class="branch-icon"><i class="ti ti-building-store"></i> الفرع الرئيسي</div>
-        <h4>حفر الباطن - المحمدية</h4>
-        <p>شارع أبو بكر الصديق<br>ت: 013-800-0001<br>الأحد – الخميس: 8ص – 10م</p>
+        <img src="1.jpg" alt="فرع الدمام" class="branch-img">
+        <div class="branch-body">
+          <div class="branch-icon"><i class="ti ti-building-store"></i> الفرع الرئيسي</div>
+          <h4>الدمام — العزيزية</h4>
+          <p>شارع الملك فهد<br>ت: 013-800-0001<br>الأحد – الخميس: 8ص – 10م</p>
+        </div>
       </div>
       <div class="branch-card">
-        <div class="branch-icon"><i class="ti ti-building-store"></i> فرع الخبر</div>
-        <h4>الخبر — الراكة</h4>
-        <p>شارع الأمير تركي<br>ت: 013-800-0002<br>السبت – الخميس: 9ص – 10م</p>
+        <img src="8.jpg" alt="فرع الخبر" class="branch-img">
+        <div class="branch-body">
+          <div class="branch-icon"><i class="ti ti-building-store"></i> فرع الخبر</div>
+          <h4>الخبر — الراكة</h4>
+          <p>شارع الأمير تركي<br>ت: 013-800-0002<br>السبت – الخميس: 9ص – 10م</p>
+        </div>
       </div>
       <div class="branch-card">
-        <div class="branch-icon"><i class="ti ti-building-store"></i> فرع الددمام</div>
-        <h4>الدمام — العزيزية</h4>
-        <p>شارع الملك فهد<br>ت: 013-800-0003<br>الأحد – الجمعة: 8ص – 9م</p>
+        <img src="10.jpg" alt="فرع الأحساء" class="branch-img">
+        <div class="branch-body">
+          <div class="branch-icon"><i class="ti ti-building-store"></i> فرع الأحساء</div>
+          <h4>الأحساء — المبرز</h4>
+          <p>شارع الملك عبدالعزيز<br>ت: 013-800-0003<br>الأحد – الجمعة: 8ص – 9م</p>
+        </div>
       </div>
     </div>
   </div>
@@ -386,7 +379,7 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
         </div>
         <div class="info-row">
           <div class="info-icon"><i class="ti ti-map-pin"></i></div>
-          <div class="info-text"><h5>العنوان</h5><p>حفر الباطن، حي المحمدية<br>شارع أبوبكر الصديق</p></div>
+          <div class="info-text"><h5>العنوان</h5><p>الدمام، حي العزيزية<br>شارع الملك فهد</p></div>
         </div>
         <div class="info-row">
           <div class="info-icon"><i class="ti ti-clock"></i></div>
@@ -394,11 +387,11 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
         </div>
         <p style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:10px;margin-top:4px">تابعونا على</p>
         <div class="social-icons">
-          <a href="https://www.instagram.com/zhab_elhasad/" target="_blank" class="soc-btn" style="background:#E1306C" title="انستغرام"><i class="ti ti-brand-instagram"></i></a>
-          <a href="https://x.com/zhab_elhasad" target="_blank" class="soc-btn" style="background:#1DA1F2" title="تويتر X"><i class="ti ti-brand-twitter"></i></a>
-          <a href="https://tiktok.com/@zhab_elhasad" target="_blank" class="soc-btn" style="background:#010101" title="تيك توك"><i class="ti ti-brand-tiktok"></i></a>
-          <a href="https://www.youtube.com/@zhab_elhasad" target="_blank" class="soc-btn" style="background:#FF0000" title="يوتيوب"><i class="ti ti-brand-youtube"></i></a>
-          <a href="https://wa.me/966597250669" target="_blank" class="soc-btn" style="background:#25D366" title="واتساب"><i class="ti ti-brand-whatsapp"></i></a>
+          <a href="https://www.instagram.com/zhab_elhasad/" target="_blank" class="soc-btn" style="background:#E1306C"><i class="ti ti-brand-instagram"></i></a>
+          <a href="https://x.com/zhab_elhasad" target="_blank" class="soc-btn" style="background:#1DA1F2"><i class="ti ti-brand-twitter"></i></a>
+          <a href="https://tiktok.com/@zhab_elhasad" target="_blank" class="soc-btn" style="background:#010101"><i class="ti ti-brand-tiktok"></i></a>
+          <a href="https://www.youtube.com/@zhab_elhasad" target="_blank" class="soc-btn" style="background:#FF0000"><i class="ti ti-brand-youtube"></i></a>
+          <a href="https://wa.me/966597250669" target="_blank" class="soc-btn" style="background:#25D366"><i class="ti ti-brand-whatsapp"></i></a>
         </div>
       </div>
       <div class="contact-form">
@@ -448,6 +441,17 @@ function showToast(msg){
 }
 function addToCart(){showToast('✓ تمت الإضافة إلى السلة');}
 function submitForm(){showToast('✓ تم إرسال رسالتك بنجاح');}
+
+// Hero slideshow
+(function(){
+  var imgs=document.querySelectorAll('.hero-bg img');
+  var cur=0;
+  setInterval(function(){
+    imgs[cur].classList.remove('active');
+    cur=(cur+1)%imgs.length;
+    imgs[cur].classList.add('active');
+  },4000);
+})();
 </script>
 </body>
 </html>
