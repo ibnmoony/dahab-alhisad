@@ -29,7 +29,12 @@ nav{background:var(--dark);padding:0 2rem;display:flex;align-items:center;justif
 .nav-links li a{color:#aac8dc;text-decoration:none;padding:7px 13px;font-size:14px;border-radius:8px;transition:all 0.2s;display:flex;align-items:center;gap:5px}
 .nav-links li a:hover,.nav-links li a.active-link{color:#fff;background:rgba(20,143,119,0.25)}
 
-.hero{background:linear-gradient(160deg,var(--dark) 0%,#0a3a5c 60%,#0d4d45 100%);padding:5rem 2rem;text-align:center;min-height:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero{padding:5rem 2rem;text-align:center;min-height:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.5s ease-in-out}
+.hero-bg img.active{opacity:1}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(13,33,55,0.82) 0%,rgba(10,58,92,0.78) 60%,rgba(13,77,69,0.75) 100%);z-index:1}
+.hero>*:not(.hero-bg){position:relative;z-index:2};padding:5rem 2rem;text-align:center;min-height:500px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-80px;left:-80px;width:350px;height:350px;background:radial-gradient(circle,rgba(20,143,119,0.25) 0%,transparent 70%);pointer-events:none}
 .hero::after{content:'';position:absolute;bottom:-60px;right:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(36,113,163,0.2) 0%,transparent 70%);pointer-events:none}
 .hero-badge{background:rgba(20,143,119,0.2);border:1px solid var(--teal);color:var(--teal-light);padding:5px 18px;border-radius:20px;font-size:13px;margin-bottom:1.4rem;display:inline-block}
@@ -278,32 +283,40 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">معجون الطماطم</div><div class="prod-desc">طبيعي 100% — مركز وغني بالنكهة، 800 جم</div><div class="prod-footer"><span class="prod-price">٢٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="بهارات">
-      <div class="prod-img"><img src="spices.jpg" alt="بهارات مشكلة"></div>
+      <div class="prod-img"><img src="14.jpg" alt="بهارات مشكلة"></div>
       <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">بهارات مشكلة</div><div class="prod-desc">نكهة أصيلة — طبيعي 100%، 300 جم</div><div class="prod-footer"><span class="prod-price">١٨ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
+    <div class="prod-card" data-cat="تمور">
+      <div class="prod-img"><img src="13.jpg" alt="تمر خلاص فاخر"></div>
+      <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">تمر خلاص فاخر</div><div class="prod-desc">القصيم — طبيعي 100%، 500 جم</div><div class="prod-footer"><span class="prod-price">21 ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
+    </div>
     <div class="prod-card" data-cat="معلبات">
-      <div class="prod-img"><img src="beans.png" alt="فاصوليا معلبة"><span class="prod-badge new">جديد</span></div>
+      <div class="prod-img"><img src="15.png" alt="فاصوليا معلبة"><span class="prod-badge new">جديد</span></div>
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">فاصوليا معلبة</div><div class="prod-desc">مصدر بروتين وألياف — طبيعي 100%، جاهزة للأكل</div><div class="prod-footer"><span class="prod-price">١٥ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="زيوت">
-      <div class="prod-img"><img src="olive.jbg" alt="زيت زيتون فاخر"></div>
+      <div class="prod-img"><img src="18.jbg" alt="زيت زيتون فاخر"></div>
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">زيت زيتون فاخر</div><div class="prod-desc">عصر بارد من أفضل بساتين البحر الأبيض المتوسط</div><div class="prod-footer"><span class="prod-price">٤٥ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="حبوب">
-      <div class="prod-img"<img src="rice.jpg" alt="أرز بسمتي ممتاز"></div>
+      <div class="prod-img"<img src="19.jpg" alt="أرز بسمتي ممتاز"></div>
       <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">أرز بسمتي ممتاز</div><div class="prod-desc">طويل الحبة عالي الجودة خالٍ من الشوائب</div><div class="prod-footer"><span class="prod-price">٣٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="حبوب">
-     <div class="prod-img"><img src="adas.jpg" alt="عدس أخضر مجفف"></div>
-      <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">عدس أخضر مجفف</div><div class="prod-desc">غني بالبروتين والألياف، معبأ بشكل محكم</div><div class="prod-footer"><span class="prod-price">١٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
+     <div class="prod-img"><img src="17.jpg" alt="عدس أصفر"></div>
+      <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">عدس أصفر</div><div class="prod-desc">غني بالبروتين والألياف، معبأ بشكل محكم</div><div class="prod-footer"><span class="prod-price">١٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="بهارات">
      <div class="prod-img"><img src="kamo.jpg" alt="كمون حبشي أصيل"></div>
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">كمون حبشي أصيل</div><div class="prod-desc">طازج التحميص بعبوة محكمة الإغلاق</div><div class="prod-footer"><span class="prod-price">٩ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card" data-cat="زيوت">
-      <div class="prod-img"><img src="salsa.jpg" alt="صلصة الطماطم الإيطالية"></div>
+      <div class="prod-img"><img src="20.jpg" alt="صلصة الطماطم الإيطالية"></div>
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">صلصة الطماطم الإيطالية</div><div class="prod-desc">وصفة أصيلة من أجود الطماطم الإيطالية الطازجة</div><div class="prod-footer"><span class="prod-price">٢٨ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
+    </div>
+    <div class="prod-card" data-cat="ألبان">
+      <div class="prod-img"><img src="12.jpg" alt="حليب أبقار"></div>
+      <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">حليب أبقار</div><div class="prod-desc">طازج يوميا من مزارعنا</div><div class="prod-footer"><span class="prod-price">11 ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
   </div>
   <footer>
