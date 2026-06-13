@@ -214,16 +214,20 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
   <p class="section-sub">أبرز ما يقدمه ذهب الحصاد من أصناف فاخرة</p>
   <div class="products-grid">
     <div class="prod-card">
-      <div class="prod-img"><img src="21.jpg" alt="معجون الطماطم"><span class="prod-badge">الأكثر مبيعاً</span></div>
-      <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">معجون الطماطم الفاخر</div><div class="prod-desc">طبيعي 100% — مركز وغني بالنكهة، بدون مواد حافظة</div><div class="prod-footer"><span class="prod-price">٢٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
-    </div>
+      <div class="prod-img"><img src="13.jpg" alt="تمر خلاص"><span class="prod-badge">الأكثر مبيعاً</span></div>
+      <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">تمر خلاص فاخر</div><div class="prod-desc">طبيعي 100%، 500 جم</div><div class="prod-footer"><span class="prod-price">٢١ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     <div class="prod-card">
+      </div>
       <div class="prod-img"><img src="14.jpg" alt="بهارات مشكلة"></div>
       <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">بهارات مشكلة أصيلة</div><div class="prod-desc">نكهة أصيلة — خلطة طبيعية 100% بعبوة 300 جم</div><div class="prod-footer"><span class="prod-price">١٨ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
     <div class="prod-card">
       <div class="prod-img"><img src="18.jpg" alt="زيت زيتون"><span class="prod-badge new">جديد</span></div>
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">زيت زيتون فاخر</div><div class="prod-desc">عصر بارد من أفضل بساتين زيتون البحر الأبيض المتوسط</div><div class="prod-footer"><span class="prod-price">٤٥ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
+    </div>
+        </div>
+    <div class="prod-img"><img src="21.jpg" alt="معجون الطماطم"><span class="prod-badge">الأكثر مبيعاً</span></div>
+      <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">معجون الطماطم الفاخر</div><div class="prod-desc">طبيعي 100% — مركز وغني بالنكهة، بدون مواد حافظة</div><div class="prod-footer"><span class="prod-price">٢٢ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     </div>
   </div>
 
@@ -240,6 +244,7 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
         <a href="#" onclick="showPage('products',document.querySelectorAll('.nav-links a')[1]);return false">المنتجات</a>
         <a href="#" onclick="showPage('location',document.querySelectorAll('.nav-links a')[2]);return false">موقعنا</a>
         <a href="#" onclick="showPage('contact',document.querySelectorAll('.nav-links a')[3]);return false">تواصل معنا</a>
+        <a href="#" onclick="showPage('contact',document.querySelectorAll('.nav-links a')[4]);return false">السلة</a>
       </div>
       <div class="footer-col">
         <h4>تواصل معنا</h4>
@@ -264,17 +269,18 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
   <p class="section-sub">تصفح مجموعتنا الكاملة من المواد الغذائية المعبأة</p>
   <div class="filter-bar">
     <button class="filter-btn active" onclick="filterProd(this,'all')">الكل</button>
+    <button class="filter-btn" onclick="filterProd(this,'تمور')">تمور ومكسرات</button>
     <button class="filter-btn" onclick="filterProd(this,'معلبات')">معلبات</button>
     <button class="filter-btn" onclick="filterProd(this,'بهارات')">بهارات وتوابل</button>
     <button class="filter-btn" onclick="filterProd(this,'زيوت')">زيوت وصلصات</button>
     <button class="filter-btn" onclick="filterProd(this,'حبوب')">حبوب وبقوليات</button>
     <button class="filter-btn" onclick="filterProd(this,'ألبان')">ألبان</button>
-    <button class="filter-btn" onclick="filterProd(this,'تمور')">تمور ومكسرات</button>
+    <button class="filter-btn" onclick="filterProd(this,'لحوم')">لحوم وأسماك</button>
   </div>
   <div class="products-grid" id="prodGrid">
     </div>
     <div class="prod-card" data-cat="تمور">
-      <div class="prod-img"><img src="13.jpg" alt="تم خلاص فاخر"><span class="prod-badge">الأكثر مبيعاً</span></div>
+      <div class="prod-img"><img src="13.jpg" alt="تمر خلاص فاخر"><span class="prod-badge">الأكثر مبيعاً</span></div>
       <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">تمر خلاص فاخر</div><div class="prod-desc">طبيعي 100%، 500 جم</div><div class="prod-footer"><span class="prod-price">٢١ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
     <div class="prod-card" data-cat="زيوت">
       <div class="prod-img"><img src="18.jpg" alt="زيت زيتون"></div>
@@ -307,6 +313,16 @@ footer{background:var(--dark);padding:2rem;border-top:2px solid var(--teal)}
     <div class="prod-card" data-cat="معلبات">
       <div class="prod-img"><img src="15.jpg" alt="فاصوليا معلبة"></div>
       <div class="prod-body"><div class="stars">★★★★★</div><div class="prod-name">فاصوليا معلبة</div><div class="prod-desc">مصدر بروتين وألياف — طبيعي 100%، جاهزة للأكل</div><div class="prod-footer"><span class="prod-price">١٥ ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
+      </div>
+      <div class="prod-card" data-cat="تمور">
+      <div class="prod-img"><img src="25.jpg" alt="حلاوة طحينية"></div>
+      <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">حلاوة طحينية</div><div class="prod-desc">بالسمسم والفسدق 100%، 500 جم</div><div class="prod-footer"><span class="prod-price">13 ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
+    </div>
+      </div>
+      <div class="prod-card" data-cat="لحوم">
+      <div class="prod-img"><img src="24.jpg" alt="لحم أنجوس "></div>
+      <div class="prod-body"><div class="stars">★★★★☆</div><div class="prod-name">لحم أنجوس</div><div class="prod-desc">من مزارعنا  500 جم</div><div class="prod-footer"><span class="prod-price">60 ر.س</span><button class="prod-btn" onclick="addToCart()">أضف للسلة</button></div></div>
+    </div>
   </div>
   <footer>
     <div class="footer-bottom" style="border-top:none;padding-top:0">© 2025 <span>ذهب الحصاد</span> — جميع الحقوق محفوظة</div>
